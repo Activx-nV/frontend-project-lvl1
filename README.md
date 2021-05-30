@@ -8,4 +8,4 @@
 ### How to use
 [![asciicast](https://asciinema.org/a/416926.svg)](https://asciinema.org/a/416926)
 ### How to play
-https://asciinema.org/a/emrmmP1VLaRx8XlUNhaRCQ7y7
+[![asciicast](https://asciinema.org/a/417253.svg)](https://asciinema.org/a/417253)
