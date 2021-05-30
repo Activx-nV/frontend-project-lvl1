@@ -39,7 +39,7 @@ You can call the menu via ```brain-games-list```.
   Is this a number prime?
 
 ## Setup
-Clone the project, then go to the main(root) directory in terminal and use commands below
+Node.JS should be installed. Clone the project, then go to the main(root) directory in terminal and use commands below
 
 ```sh
 $ sudo npm ci
