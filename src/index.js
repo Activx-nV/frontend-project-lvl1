@@ -16,7 +16,7 @@ const brainGame = (gameCorrectAnswer, description) => {
       console.log('Correct!');
     } else {
       console.log(`\n${answer} is wrong answer ;(. Correct answer was ${correctAnswer.answer}.
-Game over, ${usersName}!`);
+Let's play again, ${usersName}!`);
       return;
     }
   }
