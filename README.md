@@ -7,5 +7,5 @@
 
 ### How to use
 [![asciicast](https://asciinema.org/a/416926.svg)](https://asciinema.org/a/416926)
-### Showcase of the games
-[![asciicast](https://asciinema.org/a/417112.svg)](https://asciinema.org/a/417112)
+### How to play
+https://asciinema.org/a/emrmmP1VLaRx8XlUNhaRCQ7y7
