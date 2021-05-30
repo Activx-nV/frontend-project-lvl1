@@ -5,7 +5,7 @@
 ### Github Actions Workflow status:
 [![Node CI](https://github.com/Activx-nV/frontend-project-lvl1/actions/workflows/lint.yml/badge.svg?branch=main&event=push)](https://github.com/Activx-nV/frontend-project-lvl1/actions/workflows/lint.yml)
 
-# Welcome to the First Brain Games!
+# Welcome to the Brain Games!
 This is a terminal game, that consists of different maths tasks.
 
 Available games at the moment:
@@ -38,7 +38,20 @@ You can call the menu via ```brain-games-list```.
 
   Is this a number prime?
 
-### How to use
-[![asciicast](https://asciinema.org/a/416926.svg)](https://asciinema.org/a/416926)
+## Setup
+Clone the project, then go to the main(root) directory in terminal and use commands below
+
+```sh
+$ sudo npm ci
+```
+
+```sh
+$ sudo npm publish --dry-run
+```
+
+```sh
+$ sudo npm link
+```
+
 ### How to play
 [![asciicast](https://asciinema.org/a/417253.svg)](https://asciinema.org/a/417253)
