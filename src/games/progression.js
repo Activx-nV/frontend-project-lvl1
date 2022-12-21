@@ -10,6 +10,7 @@ const createProgressionLine = () => {
   let randomNumber = getMinToMaxRandomNumber(1, 99);
   const randomProgression = getMinToMaxRandomNumber(2, 20);
   const hideRandomProgression = getMinToMaxRandomNumber(1, 9);
+
   for (let i = 0; i < 10; i += 1) {
     if (i === 0) {
       progressionArray.push(randomNumber);
@@ -18,12 +19,14 @@ const createProgressionLine = () => {
       progressionArray.push(randomNumber);
     }
   }
+
   const saveHiddenProgression = progressionArray[hideRandomProgression];
   progressionArray[hideRandomProgression] = '..';
   const result = {
     answer: String(saveHiddenProgression),
     question: progressionArray.join(' '),
   };
+
   return result;
 };
 

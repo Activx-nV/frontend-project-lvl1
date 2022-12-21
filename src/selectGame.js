@@ -22,8 +22,8 @@ const selectGame = () => {
   gameSet[questionSelect]();
 
   const questionPlayOrExit = readlineSync.question(`\nWanna play another game?\n
-Press ENTER to return to the main menu,
-Otherwise answer "no" to exit. `);
+  Press ENTER to return to the main menu,
+  Otherwise answer "no" to exit. `);
 
   if (questionPlayOrExit === 'no') {
     console.log('Have a nice and positive rest of the day!');

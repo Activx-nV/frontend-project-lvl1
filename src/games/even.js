@@ -9,10 +9,12 @@ const isEven = (questionNumber) => questionNumber % 2 === 0;
 const brainEven = () => {
   const randomNumberQuestion = getMinToMaxRandomNumber(1, 99);
   const correctAnswer = isEven(randomNumberQuestion) ? 'yes' : 'no';
+
   const result = {
     answer: correctAnswer,
     question: `${randomNumberQuestion}`,
   };
+
   return result;
 };
 
