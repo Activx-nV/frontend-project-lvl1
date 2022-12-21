@@ -36,7 +36,7 @@ You can call the menu via ```brain-games-list```.
 
 - **Prime game**
 
-  Is this a number prime?
+  Is number prime?
 
 ## Setup
 Node.JS should be installed. Clone the project, then go to the main(root) directory in terminal and use commands below
