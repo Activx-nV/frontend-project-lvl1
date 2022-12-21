@@ -16,25 +16,27 @@ Available games at the moment:
 4) brain-progression
 5) brain-prime
 
-You can call the menu via ```brain-games-list```.
+You can call the menu via 
+brain-games-list
+.
 
-- **Even game**
+- Even game
 
   You have to answer if shown number is even or not.
 
-- **Calc game**
+- Calc game
 
   What is the result of the expression?
 
-- **GCD game**
+- GCD game
 
   Find the greatest common divisor of given numbers.
 
-- **Progression game**
+- Progression game
 
   What number is missing in this progression?
 
-- **Prime game**
+- Prime game
 
   Is number prime?
 
@@ -42,16 +44,33 @@ You can call the menu via ```brain-games-list```.
 Node.JS should be installed. Clone the project, then go to the main(root) directory in terminal and use commands below
 
 ```sh
-$ sudo npm ci
+$ make install
 ```
 
 ```sh
-$ sudo npm publish --dry-run
+$ make publish
 ```
 
 ```sh
-$ sudo npm link
+$ npm link
 ```
 
-### How to play
+### How to install
+[![asciicast](https://asciinema.org/a/547124.svg)](https://asciinema.org/a/547124)
+### How to play using the game list
 [![asciicast](https://asciinema.org/a/417253.svg)](https://asciinema.org/a/417253)
+
+### brain-calc
+[![asciicast](https://asciinema.org/a/547130.svg)](https://asciinema.org/a/547130)
+
+### brain-even
+[![asciicast](https://asciinema.org/a/547131.svg)](https://asciinema.org/a/547131)
+
+### brain-gcd
+[![asciicast](https://asciinema.org/a/547132.svg)](https://asciinema.org/a/547132)
+
+### brain-prime
+[![asciicast](https://asciinema.org/a/547136.svg)](https://asciinema.org/a/547136)
+
+### brain-progression
+[![asciicast](https://asciinema.org/a/547153.svg)](https://asciinema.org/a/547153)
