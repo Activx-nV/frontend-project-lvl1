@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
 import getMinToMaxRandomNumber from '../utils.js';
 import brainGame from '../index.js';
 

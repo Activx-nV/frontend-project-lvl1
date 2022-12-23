@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
+
 import readlineSync from 'readline-sync';
 
 import calc from './games/calc.js';
