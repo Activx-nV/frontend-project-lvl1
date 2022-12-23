@@ -14,13 +14,12 @@ const brainGame = (generateRound, description) => {
     console.log(`Question: ${question}`);
     const usersAnswer = readlineSync.question('Your answer: ');
 
-    if (usersAnswer === correctAnswer) {
-      console.log('Correct!');
-    } else {
+    if (usersAnswer !== correctAnswer) {
       console.log(`'${usersAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${usersName}!`);
       return;
     }
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${usersName}!`);
