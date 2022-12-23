@@ -20,12 +20,9 @@ const brainCalc = () => {
     default: correctAnswer = 'unknown';
   }
 
-  const result = {
-    answer: String(correctAnswer),
-    question: `${firstNumber} ${randomOperator} ${secondNumber}`,
-  };
-
-  return result;
+  const question = `${firstNumber} ${randomOperator} ${secondNumber}`;
+  const answer = String(correctAnswer);
+  return [question, answer];
 };
 
 export default () => brainGame(brainCalc, questionDescription);

@@ -4,12 +4,10 @@ export const getPredicateQA = (isFn) => {
   const randomNumber = getMinToMaxRandomNumber(1, 99);
   const correctAnswer = isFn(randomNumber) ? 'yes' : 'no';
 
-  const result = {
-    answer: correctAnswer,
-    question: `${randomNumber}`,
-  };
+  const question = `${randomNumber}`;
+  const answer = correctAnswer;
 
-  return result;
+  return [question, answer];
 };
 
 export default getMinToMaxRandomNumber;

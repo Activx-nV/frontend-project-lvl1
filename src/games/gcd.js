@@ -23,12 +23,10 @@ const brainGCD = () => {
   const randomNumber = getMinToMaxRandomNumber(1, 99);
   const randomNumber2 = getMinToMaxRandomNumber(1, 99);
 
-  const result = {
-    answer: String(findGCD(randomNumber, randomNumber2)),
-    question: `${randomNumber} ${randomNumber2}`,
-  };
+  const question = `${randomNumber} ${randomNumber2}`;
+  const answer = String(findGCD(randomNumber, randomNumber2));
 
-  return result;
+  return [question, answer];
 };
 
 export default () => brainGame(brainGCD, gameDescription);

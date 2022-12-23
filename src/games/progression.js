@@ -20,12 +20,11 @@ const createProgressionLine = () => {
 
   const saveHiddenProgression = progressionArray[hideRandomProgression];
   progressionArray[hideRandomProgression] = '..';
-  const result = {
-    answer: String(saveHiddenProgression),
-    question: progressionArray.join(' '),
-  };
 
-  return result;
+  const question = progressionArray.join(' ');
+  const answer = String(saveHiddenProgression);
+
+  return [question, answer];
 };
 
 export default () => brainGame(createProgressionLine, gameDescription);
