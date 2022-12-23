@@ -16,32 +16,30 @@ Available games at the moment:
 4) brain-progression
 5) brain-prime
 
-You can call the menu via 
-brain-games-list
-.
+You can call the menu via ```brain-games-list```.
 
-- Even game
+- **Even game**
 
   You have to answer if shown number is even or not.
 
-- Calc game
+- **Calc game**
 
   What is the result of the expression?
 
-- GCD game
+- **GCD game**
 
   Find the greatest common divisor of given numbers.
 
-- Progression game
+- **Progression game**
 
   What number is missing in this progression?
 
-- Prime game
+- **Prime game**
 
   Is number prime?
 
 ## Setup
-Node.JS should be installed. Clone the project, then go to the main(root) directory in terminal and use commands below
+Node.JS should be installed. Clone the project, then go to the main(root) directory in terminal and use commands below:
 
 ```sh
 $ make install
