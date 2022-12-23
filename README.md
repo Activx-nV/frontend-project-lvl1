@@ -16,8 +16,6 @@ Available games at the moment:
 4) brain-progression
 5) brain-prime
 
-You can call the menu via ```brain-games-list```.
-
 - **Even game**
 
   You have to answer if shown number is even or not.
@@ -55,9 +53,8 @@ $ npm link
 
 ### How to install
 [![asciicast](https://asciinema.org/a/547124.svg)](https://asciinema.org/a/547124)
-### How to play using the game list
-[![asciicast](https://asciinema.org/a/417253.svg)](https://asciinema.org/a/417253)
 
+## Game list & How to play
 ### brain-calc
 [![asciicast](https://asciinema.org/a/547130.svg)](https://asciinema.org/a/547130)
 
