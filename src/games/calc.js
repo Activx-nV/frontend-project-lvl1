@@ -17,7 +17,7 @@ const brainCalc = () => {
   let correctAnswer = 0;
   const firstNumber = getMinToMaxRandomNumber(1, 99);
   const secondNumber = getMinToMaxRandomNumber(1, 99);
-  const randomOperator = operator[+getMinToMaxRandomNumber(0, 2)];
+  const randomOperator = operator[getMinToMaxRandomNumber(0, 2)];
 
   correctAnswer = calcBasicArithmeticOperations(randomOperator, firstNumber, secondNumber);
 
