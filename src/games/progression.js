@@ -3,13 +3,12 @@ import brainGame from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
-const createProgressionLine = () => {
-  const progressionArray = [];
-  let randomNumber = getMinToMaxRandomNumber(1, 99);
+const generateProgressionLine = (progressionArray) => {
+  const lengthOfProgression = 10;
   const randomProgression = getMinToMaxRandomNumber(2, 20);
-  const hideRandomProgression = getMinToMaxRandomNumber(1, 9);
+  let randomNumber = getMinToMaxRandomNumber(1, 99);
 
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < lengthOfProgression; i += 1) {
     if (i === 0) {
       progressionArray.push(randomNumber);
     } else {
@@ -17,6 +16,13 @@ const createProgressionLine = () => {
       progressionArray.push(randomNumber);
     }
   }
+};
+
+const createProgressionLine = () => {
+  const progressionArray = [];
+  const hideRandomProgression = getMinToMaxRandomNumber(1, 9);
+
+  generateProgressionLine(progressionArray);
 
   const saveHiddenProgression = progressionArray[hideRandomProgression];
   progressionArray[hideRandomProgression] = '..';
