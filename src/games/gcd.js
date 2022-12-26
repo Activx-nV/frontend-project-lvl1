@@ -4,19 +4,14 @@ import brainGame from '../index.js';
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
 const findGCD = (num1, num2) => {
-  let numberOne = num1;
-  let numberTwo = num2;
+  const numberOne = num1;
+  const numberTwo = num2;
 
-  if (numberOne === numberTwo) {
+  if (numberTwo === 0) {
     return numberOne;
   }
-  if (numberOne > numberTwo) {
-    numberOne = num1 - num2;
-  } else {
-    numberTwo = num2 - num1;
-  }
 
-  return findGCD(numberOne, numberTwo);
+  return findGCD(numberTwo, numberOne % numberTwo);
 };
 
 const brainGCD = () => {
