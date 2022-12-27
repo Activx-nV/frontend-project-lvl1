@@ -6,10 +6,8 @@ const isEven = (questionNumber) => questionNumber % 2 === 0;
 
 const brainEven = () => {
   const randomNumber = getMinToMaxRandomNumber(1, 99);
-  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
-
-  const question = `${randomNumber}`;
-  const answer = correctAnswer;
+  const question = String(randomNumber);
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
 
   return [question, answer];
 };

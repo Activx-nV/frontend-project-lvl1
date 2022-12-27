@@ -9,20 +9,18 @@ const calcBasicArithmeticOperations = (randomOperator, firstNumber, secondNumber
     case '+': return firstNumber + secondNumber;
     case '-': return firstNumber - secondNumber;
     case '*': return firstNumber * secondNumber;
-    default: return 'unknown';
+    default: throw new Error(`operation ${randomOperator} is not supported`);
   }
 };
 
 const brainCalc = () => {
-  let correctAnswer = 0;
   const firstNumber = getMinToMaxRandomNumber(1, 99);
   const secondNumber = getMinToMaxRandomNumber(1, 99);
   const randomOperator = operator[getMinToMaxRandomNumber(0, 2)];
 
-  correctAnswer = calcBasicArithmeticOperations(randomOperator, firstNumber, secondNumber);
-
   const question = `${firstNumber} ${randomOperator} ${secondNumber}`;
-  const answer = String(correctAnswer);
+  const answer = String(calcBasicArithmeticOperations(randomOperator, firstNumber, secondNumber));
+
   return [question, answer];
 };
 

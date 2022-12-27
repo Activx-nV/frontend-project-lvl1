@@ -2,35 +2,31 @@ import getMinToMaxRandomNumber from '../utils.js';
 import brainGame from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
+const lengthOfProgression = 10;
 
-const generateProgressionLine = (progressionArray) => {
-  const lengthOfProgression = 10;
-  const randomProgression = getMinToMaxRandomNumber(2, 20);
-  let randomNumber = getMinToMaxRandomNumber(1, 99);
+const generateProgressionLine = (randomProgression, randomNumber, hiddenRandomProgressionIndex) => {
+  const progressionArray = [];
 
   for (let i = 0; i < lengthOfProgression; i += 1) {
-    if (i === 0) {
-      progressionArray.push(randomNumber);
-    } else {
-      randomNumber += randomProgression;
-      progressionArray.push(randomNumber);
-    }
+    const currentProgressionValue = randomNumber + (randomProgression * i);
+    progressionArray.push(currentProgressionValue);
   }
-};
 
-const createProgressionLine = () => {
-  const progressionArray = [];
-  const hideRandomProgression = getMinToMaxRandomNumber(1, 9);
-
-  generateProgressionLine(progressionArray);
-
-  const saveHiddenProgression = progressionArray[hideRandomProgression];
-  progressionArray[hideRandomProgression] = '..';
+  const saveHiddenProgression = progressionArray[hiddenRandomProgressionIndex];
+  progressionArray[hiddenRandomProgressionIndex] = '..';
 
   const question = progressionArray.join(' ');
   const answer = String(saveHiddenProgression);
 
   return [question, answer];
+};
+
+const createProgressionLine = () => {
+  const hiddenRandomProgressionIndex = getMinToMaxRandomNumber(1, 9);
+  const randomProgression = getMinToMaxRandomNumber(2, 20);
+  const randomNumber = getMinToMaxRandomNumber(1, 99);
+
+  return generateProgressionLine(randomProgression, randomNumber, hiddenRandomProgressionIndex);
 };
 
 export default () => brainGame(createProgressionLine, gameDescription);

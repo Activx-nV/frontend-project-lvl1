@@ -15,10 +15,8 @@ const isPrime = (num) => {
 
 const brainPrime = () => {
   const randomNumber = getMinToMaxRandomNumber(1, 99);
-  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-
-  const question = `${randomNumber}`;
-  const answer = correctAnswer;
+  const question = String(randomNumber);
+  const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return [question, answer];
 };
