@@ -4,29 +4,31 @@ import brainGame from '../index.js';
 const gameDescription = 'What number is missing in the progression?';
 const lengthOfProgression = 10;
 
-const generateProgressionLine = (progression, baseNumber, hiddenProgressionIndex) => {
+const generateProgressionLine = (progressionStep, firstElement, hiddenIndex) => {
   const progressionArray = [];
 
   for (let i = 0; i < lengthOfProgression; i += 1) {
-    const currentProgressionValue = baseNumber + (progression * i);
+    const currentProgressionValue = firstElement + (progressionStep * i);
     progressionArray.push(currentProgressionValue);
   }
 
-  const saveHiddenProgression = progressionArray[hiddenProgressionIndex];
-  progressionArray[hiddenProgressionIndex] = '..';
+  progressionArray[hiddenIndex] = '..';
 
-  const question = progressionArray.join(' ');
-  const answer = String(saveHiddenProgression);
-
-  return [question, answer];
+  return progressionArray.join(' ');
 };
 
 const createProgressionLine = () => {
-  const hiddenRandomProgressionIndex = getMinToMaxRandomNumber(1, 9);
-  const randomProgression = getMinToMaxRandomNumber(2, 20);
-  const randomNumber = getMinToMaxRandomNumber(1, 99);
+  const hiddenIndex = getMinToMaxRandomNumber(1, 9);
+  const progressionStep = getMinToMaxRandomNumber(2, 20);
+  const firstElement = getMinToMaxRandomNumber(1, 99);
+  const progressionLine = generateProgressionLine(progressionStep, firstElement, hiddenIndex);
+  let answer;
 
-  return generateProgressionLine(randomProgression, randomNumber, hiddenRandomProgressionIndex);
+  for (let i = 0; i < lengthOfProgression; i += 1) {
+    if (i === hiddenIndex) answer = String(firstElement + (progressionStep * i));
+  }
+
+  return [progressionLine, answer];
 };
 
 export default () => brainGame(createProgressionLine, gameDescription);
