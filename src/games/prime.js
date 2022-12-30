@@ -6,9 +6,9 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const isPrime = (number) => {
   if (number <= 1) return false;
 
-  const num = Math.sqrt(number);
+  const sqrt = Math.sqrt(number);
 
-  for (let counter = 2; counter <= num; counter += 1) {
+  for (let counter = 2; counter <= sqrt; counter += 1) {
     if (number % counter === 0) return false;
   }
 

@@ -22,11 +22,7 @@ const createProgressionLine = () => {
   const progressionStep = getMinToMaxRandomNumber(2, 20);
   const firstElement = getMinToMaxRandomNumber(1, 99);
   const progressionLine = generateProgressionLine(progressionStep, firstElement, hiddenIndex);
-  let answer;
-
-  for (let i = 0; i < lengthOfProgression; i += 1) {
-    if (i === hiddenIndex) answer = String(firstElement + (progressionStep * i));
-  }
+  const answer = String(firstElement + (progressionStep * hiddenIndex));
 
   return [progressionLine, answer];
 };
